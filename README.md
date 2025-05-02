@@ -87,4 +87,5 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 
 1. In the navigation pane search for API Gateway, choose REST API, click "Build"
 2. Choose Create API, enter a name `chatbot-api` click "Create API".
-3. Once the REST API is created, click on "Create Resource"
+3. Once the REST API is created, click on "Create Resource" 
+4. Enter a resource, i'll enter `chat`
