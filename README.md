@@ -32,17 +32,17 @@ In this step-by-step tutorial, you'll learn how to create a powerful serverless 
 
 ## <a name="steps">💡 What You'll Learn: </a>
  
-• How to use Amazon Bedrock to access large language models (LLMs)
-• How to create a chatbot backend with AWS Lambda
-• How to connect the chatbot to your frontend using API Gateway
-• How to fix CORS errors and handle OPTIONS requests
-• How to deploy a stylish chat UI with pure HTML, CSS, and JavaScript
+• How to use Amazon Bedrock to access large language models (LLMs)<br>
+• How to create a chatbot backend with AWS Lambda<br>
+• How to connect the chatbot to your frontend using API Gateway<br>
+• How to fix CORS errors and handle OPTIONS requests<br>
+• How to deploy a stylish chat UI with pure HTML, CSS, and JavaScript<br>
 
 ## <a name="steps">🛠 Tech Stack: </a>
-• Amazon Bedrock (Titan Text G1 - Express)
-• AWS Lambda
-• Amazon API Gateway
-• Amazon S3 (Static Hosting)
-• JavaScript + HTML + CSS
+• Amazon Bedrock (Titan Text G1 - Express)<br>
+• AWS Lambda<br>
+• Amazon API Gateway<br>
+• Amazon S3 (Static Hosting)<br>
+• JavaScript + HTML + CSS<br>
 
 ## ➡️ Step 1 - Setup your React.js App on GitHub
