@@ -60,9 +60,14 @@ Make sure your AWS account has Bedrock access (Bedrock is GA now but some region
 
 ## ➡️ Step 2 - Create an IAM Role for Lambda
 
-Create a role with these permissions:
+1. In the navigation pane of the IAM console, choose Roles, and then choose Create role.
+2. For Trusted entity type, choose AWS service
+3. For Service or use case, choose a service `Lambda` then Choose Next.
+4. For Permissions policies, the options depend on the use case that you selected, for this demo select these permissions:
 • `AmazonBedrockFullAccess`<br>
 • `CloudWatchLogsFullAccess`<br>
+5. For Role name, enter `chatBotLambdaRole`
+6. Review the role, and then choose Create role.
 
 
 ## ➡️ Step 3 - Create the Lambda Function
