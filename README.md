@@ -80,6 +80,79 @@ To create a Lambda function with the console:
 4. In the Basic information pane, for Function name, enter `chatbotlambda`
 5. For Runtime, choose Python 3.12 (easiest for Bedrock SDK usage).
 6. Leave architecture set to x86_64, and then choose Create function.
+7. For the Lambda function code, copy and paste the code below to your lambda code editor:
+
+```py
+import boto3
+import json
+
+bedrock = boto3.client('bedrock-runtime', region_name='us-east-1')
+
+def lambda_handler(event, context):
+    # Handle preflight (OPTIONS) request for CORS
+    if event['httpMethod'] == 'OPTIONS':
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+            },
+            'body': json.dumps('Preflight OK')
+        }
+
+    # Parse incoming JSON
+    body = json.loads(event['body'])
+    user_message = body.get('message', '')
+    history = body.get('history', [])
+
+    # Optional: construct prompt with history
+    conversation = ""
+    for turn in history:
+        conversation += f"User: {turn['user']}\nAssistant: {turn['assistant']}\n"
+    conversation += f"User: {user_message}\nAssistant:"
+
+    # Create payload for Titan
+    request_body = {
+        "inputText": conversation,
+        "textGenerationConfig": {
+            "maxTokenCount": 300,
+            "temperature": 0.7,
+            "topP": 0.9,
+            "stopSequences": []
+        }
+    }
+
+    # Call Titan model
+    response = bedrock.invoke_model(
+        modelId='amazon.titan-text-express-v1',
+        body=json.dumps(request_body),
+        contentType='application/json',
+        accept='application/json'
+    )
+
+    # Extract model output
+    result = json.loads(response['body'].read())
+    reply = result.get('results', [{}])[0].get('outputText', '')
+
+    # Return response with CORS headers
+    return {
+        'statusCode': 200,
+        'headers': {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*',
+            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+        },
+        'body': json.dumps({'response': reply})
+    }
+```
+
+NOTE: This function:
+✅ Accepts a message from the user<br>
+
+
+
 
 ## ➡️ Step 4 - Set Up API Gateway
 
@@ -89,11 +162,11 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 2. Choose Create API, enter a name `chatbot-api` click "Create API".
 3. Once the REST API is created, click on "Create Resource" 
 4. Enter a resource, i'll enter `chat`
-5. Make sure you check `CORS` (Cross Origin Resource Sharing), which will create an OPTIONS method that allows all origins, all methods, and several common headers.
+5. Make sure you Enable `CORS` (Cross Origin Resource Sharing), which will create an OPTIONS method that allows all origins, all methods, and several common headers.
 6. Once the resource is created, click on "Create method"
 7. For the method type, choose `POST` 
 8. For the integration type choose "Lambda function"
-9. Make sure you check Lambda proxy integration to send the request to your Lambda function as a structured event.
+9. Make sure you Enable Lambda proxy integration to send the request to your Lambda function as a structured event.
 10. Choose the your regoin `us-east-1` then choose your existing Lambda function that you created earlier.
 11. Keep everything as default then click "Create method"
 12. Back resources, click on "Deploy API"
