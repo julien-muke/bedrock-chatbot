@@ -89,3 +89,7 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 2. Choose Create API, enter a name `chatbot-api` click "Create API".
 3. Once the REST API is created, click on "Create Resource" 
 4. Enter a resource, i'll enter `chat`
+5. Make sure you check `CORS` (Cross Origin Resource Sharing), which will create an OPTIONS method that allows all origins, all methods, and several common headers.
+6. Once the resource is created, click on "Create method"
+7. For the method type, choose `POST` 
+8. For the integration type choose "Lambda function"
