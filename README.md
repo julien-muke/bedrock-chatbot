@@ -30,12 +30,19 @@ like these step-by-step in a beginner-friendly manner!
 In this step-by-step tutorial, you'll learn how to create a powerful serverless chatbot using Amazon Bedrock's Titan Text G1 - Express LLM. We’ll connect it to AWS Lambda, expose it via API Gateway with proper CORS handling, and deploy a beautiful HTML/JavaScript frontend using S3 static website hosting.
 
 
-## <a name="steps">🔧 How it Works:</a>
+## <a name="steps">💡 What You'll Learn: </a>
  
-1. Push code to the `main` branch on GitHub.
-2. AWS CodePipeline detects the change.
-3. AWS CodeBuild installs dependencies and builds the React app.
-4. The build output is deployed to the S3 bucket.
-5. S3 serves the app as a public static website.
+• How to use Amazon Bedrock to access large language models (LLMs)
+• How to create a chatbot backend with AWS Lambda
+• How to connect the chatbot to your frontend using API Gateway
+• How to fix CORS errors and handle OPTIONS requests
+• How to deploy a stylish chat UI with pure HTML, CSS, and JavaScript
+
+## <a name="steps">🛠 Tech Stack: </a>
+• Amazon Bedrock (Titan Text G1 - Express)
+• AWS Lambda
+• Amazon API Gateway
+• Amazon S3 (Static Hosting)
+• JavaScript + HTML + CSS
 
 ## ➡️ Step 1 - Setup your React.js App on GitHub
