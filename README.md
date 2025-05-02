@@ -1,10 +1,10 @@
-# ![aws](https://github.com/julien-muke/Search-Engine-Website-using-AWS/assets/110755734/01cd6124-8014-4baa-a5fe-bd227844d263) Deploy React App with Full CI/CD Pipeline on AWS | GitHub + CodePipeline + S3 🚀
+# ![aws](https://github.com/julien-muke/Search-Engine-Website-using-AWS/assets/110755734/01cd6124-8014-4baa-a5fe-bd227844d263) 🚀 Build a Serverless AI Chatbot with Amazon Bedrock, Lambda, API Gateway & S3 🤖
 
 <div align="center">
 
   <br />
     <a href="https://youtu.be/1k6s4shjpRc?si=NOQo77cZQtTA6eGW" target="_blank">
-      <img src="https://github.com/user-attachments/assets/9f9b55f3-c9c2-4b87-97c7-030be3464a83" alt="Project Banner">
+      <img src="https://github.com/user-attachments/assets/cb49ad40-aad7-4901-8fc1-4ae8beae4642" alt="Project Banner">
     </a>
   <br />
 
