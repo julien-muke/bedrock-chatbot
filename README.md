@@ -59,8 +59,9 @@ Make sure your AWS account has Bedrock access (Bedrock is GA now but some region
 ![Image](https://github.com/user-attachments/assets/5d5a4d37-2b96-428a-92c4-01ca441c9f17)
 
 ## ➡️ Step 2 - Create an IAM Role for Lambda
+To create an IAM role with the console:
 
-1. In the navigation pane of the IAM console, choose Roles, and then choose Create role.
+1. In the navigation pane search for IAM, choose Roles, and then choose Create role.
 2. For Trusted entity type, choose AWS service
 3. For Service or use case, choose a service `Lambda` then Choose Next.
 4. For Permissions policies, the options depend on the use case that you selected, for this demo select these permissions:
@@ -73,10 +74,17 @@ Make sure your AWS account has Bedrock access (Bedrock is GA now but some region
 ## ➡️ Step 3 - Create the Lambda Function
 To create a Lambda function with the console:
 
-1. In the navigation to Lambda function
+1. In the navigation pane search for Lambda function
 2. Choose Create function.
 3. Select Author from scratch.
 4. In the Basic information pane, for Function name, enter `chatbotlambda`
 5. For Runtime, choose Python 3.12 (easiest for Bedrock SDK usage).
 6. Leave architecture set to x86_64, and then choose Create function.
 
+## ➡️ Step 4 - Set Up API Gateway
+
+We're will create a REST API, the REST API provides an HTTP endpoint for your Lambda function. API Gateway routes requests to your Lambda function, and then returns the function's response to clients.
+
+1. In the navigation pane search for API Gateway, choose REST API, click "Build"
+2. Choose Create API, enter a name `chatbot-api` click "Create API".
+3. Once the REST API is created, click on "Create Resource"
