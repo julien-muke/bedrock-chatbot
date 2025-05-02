@@ -148,10 +148,10 @@ def lambda_handler(event, context):
     }
 ```
 
-NOTE: This function:
+⚠️Note: This function will:
 ✅ Accepts a message from the user<br>
-
-
+✅ Sends it to a Bedrock LLM
+✅ Returns the model's response
 
 
 ## ➡️ Step 4 - Set Up API Gateway
