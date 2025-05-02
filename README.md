@@ -8,7 +8,7 @@
     </a>
   <br />
 
-<h3 align="center">Deploying a React app using EC2 and Terraform</h3>
+<h3 align="center">Serverless AI Chatbot using Amazon Bedrock</h3>
 
    <div align="center">
      Build this hands-on demo step by step with my detailed tutorial on <a href="http://www.youtube.com/@julienmuke/videos" target="_blank"><b>Julien Muke</b></a> YouTube. Feel free to subscribe 🔔!
@@ -27,7 +27,7 @@ like these step-by-step in a beginner-friendly manner!
 
 ## <a name="introduction">🤖 Introduction</a>
 
-In this tutorial, you'll learn how to build a fully automated CI/CD pipeline using AWS CodePipeline, CodeBuild, and Amazon S3 to deploy a React.js application hosted on GitHub. Say goodbye to manual deployments, every time you push to your repo, your app will automatically build and deploy to a static website on S3!
+In this step-by-step tutorial, you'll learn how to create a powerful serverless chatbot using Amazon Bedrock's Titan Text G1 - Express LLM. We’ll connect it to AWS Lambda, expose it via API Gateway with proper CORS handling, and deploy a beautiful HTML/JavaScript frontend using S3 static website hosting.
 
 
 ## <a name="steps">🔧 How it Works:</a>
