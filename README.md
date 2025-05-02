@@ -71,4 +71,12 @@ Make sure your AWS account has Bedrock access (Bedrock is GA now but some region
 
 
 ## ➡️ Step 3 - Create the Lambda Function
+To create a Lambda function with the console:
+
+1. In the navigation to Lambda function
+2. Choose Create function.
+3. Select Author from scratch.
+4. In the Basic information pane, for Function name, enter `chatbotlambda`
+5. For Runtime, choose Python 3.12 (easiest for Bedrock SDK usage).
+6. Leave architecture set to x86_64, and then choose Create function.
 
