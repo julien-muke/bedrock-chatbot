@@ -93,3 +93,7 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 6. Once the resource is created, click on "Create method"
 7. For the method type, choose `POST` 
 8. For the integration type choose "Lambda function"
+9. Make sure you check Lambda proxy integration to send the request to your Lambda function as a structured event.
+10. Choose the your regoin `us-east-1` then choose your existing Lambda function that you created earlier.
+11. Keep the rest as default then click "Create method"
+
