@@ -170,4 +170,14 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 10. Choose the your regoin `us-east-1` then choose your existing Lambda function that you created earlier.
 11. Keep everything as default then click "Create method"
 12. Back resources, click on "Deploy API"
+13. For the deploy stage, create a new stage, i'll name it `dev` then click on "Deploy"
+
+## ➡️ Step 5 - Build the Frontend Chat UI
+
+Before we test our API Gateway, 
+
+Once it's deployed successfully, we'lle have an invoke URL that will be our API endpoint, we're going to call and then it's going to call the Lambda function to generate the response
+to us so. You can test it using Postman or curl
+
+
 
