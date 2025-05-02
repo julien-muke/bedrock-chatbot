@@ -46,12 +46,24 @@ In this step-by-step tutorial, you'll learn how to create a powerful serverless 
 • JavaScript + HTML + CSS<br>
 
 ## ➡️ Step 1 - Set Up Amazon Bedrock Access
+
+Make sure your AWS account has Bedrock access (Bedrock is GA now but some regions might differ — N. Virginia us-east-1 is safest).
+
 1. Go to the AWS Console → Amazon Bedrock
-2. Request access to amazon.titan-text-express-v1
+2. Request access to `amazon.titan-text-express-v1` you can also choose any models you want to use based on your needs.
 
 ![Image](https://github.com/user-attachments/assets/d86d2963-1c01-4fe6-a215-12817e17f1e3)
 
 3. Once approved, you're ready to build
 
 ![Image](https://github.com/user-attachments/assets/5d5a4d37-2b96-428a-92c4-01ca441c9f17)
+
+## ➡️ Step 2 - Create an IAM Role for Lambda
+
+Create a role with these permissions:
+• `AmazonBedrockFullAccess`<br>
+• `CloudWatchLogsFullAccess`<br>
+
+
+## ➡️ Step 3 - Create the Lambda Function
 
