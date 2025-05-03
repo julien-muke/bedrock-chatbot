@@ -342,7 +342,7 @@ I have a sample that we'll use for this tutorial, feel free to copy and use it f
 ⚠️Note: Replace `https://your-api-id.execute-api.us-east-1.amazonaws.com/chat` with your real API Gateway endpoint.
 
 
-## ➡️ Step 5 - Deploy Frontend Chat UI to an S3 static website
+## ➡️ Step 5 - Deploy Frontend Chat UI to an S3 Static Website
 
 We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 
@@ -378,4 +378,4 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 13. To visit your fully serverless AI chatbot Live, click on the Object URL.
 14. You should see your AI Chatbot with a stylish chat interface running on Amazon S3.
 
-Now you can ask anything and you will have a real-time AI responses.
+Now you can ask the AI Chatbot anything and you will have a real-time AI responses.
