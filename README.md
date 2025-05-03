@@ -148,7 +148,7 @@ def lambda_handler(event, context):
     }
 ```
 
-⚠️Note: This function will:
+⚠️Note: This function will;<br>
 ✅ Accepts a message from the user<br>
 ✅ Sends it to a Bedrock LLM<br>
 ✅ Returns the model's response<br>
@@ -172,12 +172,160 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 12. Back resources, click on "Deploy API"
 13. For the deploy stage, create a new stage, i'll name it `dev` then click on "Deploy"
 
+## Test API Gateway
+• Link your POST route to the Lambda
+• Enable CORS: Allow-Origin: `*`, Methods: POST, OPTIONS
+• Deploy your API and test using Postman or curl
+
+⚠️Note: Once it's deployed successfully, we'll have an invoke URL that will be our API endpoint, we're going to call it and then it's going to call the Lambda function to generate the response to us so.
+
 ## ➡️ Step 5 - Build the Frontend Chat UI
 
-Before we test our API Gateway, 
+Build a stylish chat interface using pure HTML + CSS + JavaScript — no frameworks, easy to deploy via S3 or Amplify.
+I have a sample that we'll use for this tutorial, feel free to copy and use it for this demo.
 
-Once it's deployed successfully, we'lle have an invoke URL that will be our API endpoint, we're going to call and then it's going to call the Lambda function to generate the response
-to us so. You can test it using Postman or curl
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot using Amazon Bedrock</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f8fa;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #232f3e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #chatBox {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .message {
+      max-width: 80%;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .user {
+      align-self: flex-end;
+      background-color: #0073bb;
+      color: white;
+    }
+
+    .bot {
+      align-self: flex-start;
+      background-color: #e1ecf4;
+      color: #333;
+    }
+
+    footer {
+      padding: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      background-color: white;
+      border-top: 1px solid #ddd;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      padding: 0.75rem 1rem;
+      background-color: #ff9900;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e48c00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🤖 AI Chatbot — Powered by Amazon Bedrock</header>
+
+  <div id="chatBox"></div>
+
+  <footer>
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </footer>
+
+  <script>
+    let history = [];
+
+    async function sendMessage() {
+      const userInput = document.getElementById('userInput');
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      // Show user message
+      addMessage(message, 'user');
+
+      // Call backend
+      const response = await fetch('https://your-api-id.execute-api.us-east-1.amazonaws.com/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, history })
+      });
+
+      const data = await response.json();
+      const botReply = data.response;
+
+      // Show bot message
+      addMessage(botReply, 'bot');
+
+      // Update history
+      history.push({ user: message, assistant: botReply });
+
+      // Reset input
+      userInput.value = '';
+    }
+
+    function addMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.classList.add('message', sender);
+      msg.textContent = text;
+      document.getElementById('chatBox').appendChild(msg);
+      msg.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
+```
 
 
 
