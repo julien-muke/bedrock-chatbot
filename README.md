@@ -30,13 +30,12 @@ like these step-by-step in a beginner-friendly manner!
 In this step-by-step tutorial, you'll learn how to create a powerful serverless AI Chatbot using Amazon Bedrock's Titan Text G1 - Express LLM. We’ll connect it to AWS Lambda, expose it via API Gateway with proper CORS handling, and deploy a beautiful HTML/JavaScript frontend using S3 static website hosting.
 
 
-## <a name="steps">💡 What You'll Learn: </a>
+## <a name="steps">🔎 Overview </a>
  
-• How to use Amazon Bedrock to access large language models (LLMs)<br>
-• How to create a chatbot backend with AWS Lambda<br>
-• How to connect the chatbot to your frontend using API Gateway<br>
-• How to fix CORS errors and handle OPTIONS requests<br>
-• How to deploy a stylish chat UI with pure HTML, CSS, and JavaScript<br>
+• Users interact with the chatbot either through a static frontend hosted on Amazon S3 or Amplify Hosting or by calling the API directly.<br>
+• Their messages are sent as HTTPS requests to Amazon API Gateway, which securely forwards them to an AWS Lambda function.<br>
+• The Lambda function processes the input and uses an IAM Role to securely call Amazon Bedrock, invoking the Titan model to generate a chatbot response.<br>
+• That response flows back through Lambda and API Gateway to the user.<br>
 
 ## <a name="steps">🛠 Tech Stack: </a>
 • Amazon Bedrock (Titan Text G1 - Express)<br>
