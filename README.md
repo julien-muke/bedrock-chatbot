@@ -184,6 +184,10 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 Build a stylish chat interface using pure HTML + CSS + JavaScript — no frameworks, easy to deploy via S3 or Amplify.
 I have a sample that we'll use for this tutorial, feel free to copy and use it for this demo.
 
+1. Open your code editor (VS Code)
+2. Create an `index.html` file 
+3. Copy and paste the code below
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -327,5 +331,16 @@ I have a sample that we'll use for this tutorial, feel free to copy and use it f
 </html>
 ```
 
+⚠️Note: Replace `https://your-api-id.execute-api.us-east-1.amazonaws.com/chat` with your real API Gateway endpoint.
 
 
+## ➡️ Step 5 - Deploy Frontend Chat UI to an S3 static website
+
+We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
+
+1. In the AWS Management Console, navigate to Amazon S3, click on "Create Bucket"
+2. For General configuration, choose choose General purpose buckets.
+3. Enter a unique bucket name, i'll name `myaichatbotdemo`
+4. Make sure you disable "Block all public access" to have public access.
+5. Keep everything else as default and click "Create bucket"
+6. 
