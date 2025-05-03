@@ -368,4 +368,6 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 
 12. Go back to the S3 Bucket console, choose Objects, then click on `index.html`
 13. To visit your fully serverless AI chatbot Live, click on the Object URL.
-14. You should see your React.js App running on Amazon S3
+14. You should see your AI Chatbot with a stylish chat interface running on Amazon S3.
+
+Now you can ask anything and you will have a real-time AI responses.
