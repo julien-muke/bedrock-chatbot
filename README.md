@@ -188,6 +188,9 @@ I have a sample that we'll use for this tutorial, feel free to copy and use it f
 2. Create an `index.html` file 
 3. Copy and paste the code below
 
+<details>
+<summary><code>index.html</code></summary>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -330,6 +333,7 @@ I have a sample that we'll use for this tutorial, feel free to copy and use it f
 </body>
 </html>
 ```
+</details>
 
 ⚠️Note: Replace `https://your-api-id.execute-api.us-east-1.amazonaws.com/chat` with your real API Gateway endpoint.
 
