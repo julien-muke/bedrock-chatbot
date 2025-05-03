@@ -82,6 +82,9 @@ To create a Lambda function with the console:
 6. Leave architecture set to x86_64, and then choose Create function.
 7. For the Lambda function code, copy and paste the code below to your lambda code editor:
 
+<details>
+<summary><code>lambda_function.py</code></summary>
+
 ```py
 import boto3
 import json
@@ -147,6 +150,7 @@ def lambda_handler(event, context):
         'body': json.dumps({'response': reply})
     }
 ```
+</details>
 
 ⚠️Note: This function will;<br>
 ✅ Accepts a message from the user<br>
