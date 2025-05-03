@@ -80,7 +80,7 @@ To create a Lambda function with the console:
 4. In the Basic information pane, for Function name, enter `chatbotlambda`
 5. For Runtime, choose Python 3.12 (easiest for Bedrock SDK usage).
 6. Leave architecture set to x86_64, and then choose Create function.
-7. For the Lambda function code, copy and paste the code below to your lambda code editor:
+7. For the Lambda function code, copy and paste the code below into your Lambda code editor:
 
 <details>
 <summary><code>lambda_function.py</code></summary>
