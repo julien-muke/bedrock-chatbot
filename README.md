@@ -56,7 +56,7 @@ Make sure your AWS account has Bedrock access (Bedrock is GA now but some region
 
 3. Once approved, you're ready to build
 
-![Image](https://github.com/user-attachments/assets/5d5a4d37-2b96-428a-92c4-01ca441c9f17)
+![Image](https://github.com/user-attachments/assets/802d52f4-a6c7-4a5b-8003-ede95ed778a4)
 
 ## ➡️ Step 2 - Create an IAM Role for Lambda
 To create an IAM role with the console:
