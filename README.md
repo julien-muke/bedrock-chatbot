@@ -342,7 +342,7 @@ I have a sample that we'll use for this tutorial, feel free to copy and use it f
 ⚠️Note: Replace `https://your-api-id.execute-api.us-east-1.amazonaws.com/chat` with your real API Gateway endpoint.
 
 
-## ➡️ Step 5 - Deploy Frontend Chat UI to an S3 Static Website
+## ➡️ Step 6 - Deploy Frontend Chat UI to an S3 Static Website
 
 We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 
