@@ -344,9 +344,9 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 4. Make sure you disable "Block all public access" to have public access.
 5. Keep everything else as default and click "Create bucket"
 6. Upload the `index.html` file that you created in step 5
-7. Go to "Properties" and scroll down to "Static Website Hosting" click on "Edit"
-8. Make sure you Enable "Static website"
-9. Enter `index.html` for index document
+7. Go to "Properties" and scroll down to "Static Website Hosting" and click on "Edit"
+8. Under "Static Website Hosting", choose "Enable"
+9. Specify index.html as the index document, then click "Save"
 10. Go to "Permissions" under Bucket Policy click "Edit"
 11. Paste the Bucket Policy below, that grants read-only access to all objects (s3:GetObject) inside a specific S3 bucket.
 
@@ -364,6 +364,7 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
   ]
 }
 ```
-⚠️Note: Replace `your-bucket-name` with your actual bucket name.
+⚠️Note: Replace `your-bucket-name` with your actual bucket name, then click "Save"
 
-12. Back to S3 Console, click on "Objects"
+12. Go back to the S3 Bucket console, choose Objects, then click on `index.html`
+13. To visit your fully serverless AI chatbot Live, click on the Object URL.
