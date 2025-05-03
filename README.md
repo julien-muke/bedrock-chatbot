@@ -343,4 +343,4 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 3. Enter a unique bucket name, i'll name `myaichatbotdemo`
 4. Make sure you disable "Block all public access" to have public access.
 5. Keep everything else as default and click "Create bucket"
-6. 
+6. Upload the `index.html` file that you created in step 5, 
