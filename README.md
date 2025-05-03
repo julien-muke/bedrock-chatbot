@@ -64,7 +64,7 @@ To create an IAM role with the console:
 1. In the navigation pane search for IAM, choose Roles, and then choose Create role.
 2. For Trusted entity type, choose AWS service
 3. For Service or use case, choose a service `Lambda` then Choose Next.
-4. For Permissions policies, the options depend on the use case that you selected, for this demo select these permissions:
+4. For Permissions policies, the options depend on the use case that you selected, for this demo select these permissions:<br>
 • `AmazonBedrockFullAccess`<br>
 • `CloudWatchLogsFullAccess`<br>
 5. For Role name, enter `chatBotLambdaRole`
