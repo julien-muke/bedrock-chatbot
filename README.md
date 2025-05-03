@@ -378,4 +378,8 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 13. To visit your fully serverless AI chatbot Live, click on the Object URL.
 14. You should see your AI Chatbot with a stylish chat interface running on Amazon S3.
 
-Now you can ask the AI Chatbot anything and you will have a real-time AI responses.
+🏆 Now you can ask the AI Chatbot anything and you will have a real-time AI responses.
+
+## 🗑️ Clean Up Resources
+
+When you’re done, clean up your AWS resources to avoid charges.
