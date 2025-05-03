@@ -365,3 +365,5 @@ We'll deploy our fully serverless AI chatbot to S3 for static website hosting.
 }
 ```
 ⚠️Note: Replace `your-bucket-name` with your actual bucket name.
+
+12. Back to S3 Console, click on "Objects"
