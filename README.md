@@ -179,9 +179,8 @@ We're will create a REST API, the REST API provides an HTTP endpoint for your La
 13. For the deploy stage, create a new stage, i'll name it `dev` then click on "Deploy"
 
 ## Test API Gateway
-• Link your POST route to the Lambda<br>
-• Enable CORS: Allow-Origin: `*`, Methods: POST, OPTIONS<br>
-• Deploy your API and test using Postman or curl<br>
+
+Deploy your API and test using Postman or curl<br>
 
 ⚠️Note: Once it's deployed successfully, we'll have an invoke URL that will be our API endpoint, we're going to call it and then it's going to call the Lambda function to generate the response to us so.
 
